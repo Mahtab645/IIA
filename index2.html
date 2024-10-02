@@ -23,11 +23,13 @@
                 
   <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="css/hover.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/css/swiper.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/css/swiper.min.css"/>
 </head>
 
-		
 	</head>
 	<body>
+		
 	
 	
 	<header>
@@ -90,9 +92,63 @@
 </nav>
 </div>
 	</header>
+
+
+	<div class="banner_mainslider">
+		<div class="swiper-container">
+		   <!-- Additional required wrapper -->
+		   <div class="swiper-wrapper">
+		   <!-- Slider -->
+		   
+			  <!-- Slide1 -->
+			  <div class="swiper-slide" style="background-color: #e31e24">
+				 <div class="swiper-item" style="background-image: url(./img/banner.png)">
+				 </div>
+				 <span class="number">01</span>
+				 <div class="slide-text playText" style="background-color: #e31e24">
+					<p>WE UTILIZE A FAST PRINTING PROCESS AT OUR FACTORY TO ENSURE QUICK TURNAROUND TIMES AND EFFICIENT PRODUCTION</p>
+					
+				 </div>
+			  </div>
+			  <!-- END Slide1 -->
+			  <!-- Slide2 -->
+			  <div class="swiper-slide" style="background-color: #eacb00">
+				 <div class="swiper-item" style="background-image: url(./img/banner.png)">
+				 </div>
+				 <span class="number">02</span>
+				 <div class="slide-text" style="background-color: #eacb00">
+					
+					<p>WE UTILIZE A FAST PRINTING PROCESS AT OUR FACTORY TO ENSURE QUICK TURNAROUND TIMES AND EFFICIENT PRODUCTION</p>
+					
+				 </div>
+			  </div>
+			  <!-- END Slide2 -->
+			  
+			  <!-- Slide3 -->
+			  <div class="swiper-slide" style="background-color: #d3a645">
+				 <div class="swiper-item" style="background-image: url(./img/banner.png">
+				 </div>
+				 <span class="number">03</span>
+				 <div class="slide-text" style="background-color: #d3a645">
+					<p>WE UTILIZE A FAST PRINTING PROCESS AT OUR FACTORY TO ENSURE QUICK TURNAROUND TIMES AND EFFICIENT PRODUCTION</p>
+					
+				 </div>
+			  </div>
+			  <!-- END Slide3 -->
+		   </div>
+		   <!-- If we need pagination -->
+		   <div class="swiper-pagination"></div>
+		
+		   <!-- If we need navigation buttons -->
+		   <div class="swiper-arrows">
+		   <div class="swiper-button-prev"><span></span></div>
+		   <div class="swiper-button-next"><span></span></div>
+		   </div>
+		</div>
+	   </div>
 	
 	
-	 <div class="banner_slider">
+	 <!-- <div class="banner_slider">
 	    <div id="carouselExampleDark" class="carousel carousel-dark slide">
  
   <div class="carousel-inner">
@@ -126,7 +182,7 @@
     <span class="visually-hidden">Next</span>
   </button>
 </div>
-	 </div>
+	 </div> -->
 	
 	<section class="manufacture " >
 	<div class="bg-gray pb-5 pt-5">
@@ -386,18 +442,54 @@ Navi Mumbai - 400 709, Maharashtra, India</p>
   });
 </script>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.min.js"></script>
 <script>
-    var swiper = new Swiper(".mySwiper", {
-      pagination: {
-        el: ".swiper-pagination",
-        type: "progressbar",
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    });
-  </script>
+    // swiper
+var mySwiper = new Swiper(".swiper-container", {
+   effect: "",
+   loop: false,
+   speed: 800,
+   navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+   },
+   pagination: {
+      el: ".swiper-pagination",
+      type: "bullets",
+      clickable: "true"
+   }
+});
+
+//transitions
+var btnNext = document.querySelector(".swiper-button-next"),
+   btnPrev = document.querySelector(".swiper-button-prev"),
+   sliderText = document.querySelectorAll(".slide-text"),
+   sliderNumber = document.querySelectorAll(".swiper-slide .number");
+
+btnNext.addEventListener("click", transitionSlideNext);
+btnPrev.addEventListener("click", transitionSlidePrev);
+
+function transitionSlideNext() {
+   var slideActiveText = document.querySelector(
+         ".swiper-slide-active .slide-text"
+      ),
+      slidePrevText = document.querySelector(".swiper-slide-prev .slide-text");
+
+   slidePrevText.classList.remove("playText");
+   slideActiveText.classList.add("playText");
+}
+
+function transitionSlidePrev() {
+   var slideActiveText = document.querySelector(
+         ".swiper-slide-active .slide-text"
+      ),
+      slideNextText = document.querySelector(".swiper-slide-next .slide-text");
+
+   slideNextText.classList.remove("playText");
+   slideActiveText.classList.add("playText");
+}
+
+ </script>
   
 
 		</body>

@@ -235,3 +235,317 @@ footer.footer a, footer.footer p {
     transition: 0.5s all;
 }
 
+
+.swiper-container {
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
+  
+  .swiper-slide {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    transition: all 0.3s ease;
+    background-position: fixed;
+  }
+  
+  .swiper-item {
+    width: 80%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    position: absolute;
+  }
+  
+  .swiper-slide .number {
+    width: auto;
+    height: auto;
+    position: absolute;
+    right: 10px;
+    bottom: -40px;
+    font-size: 120px;
+    -webkit-text-stroke: 1px white;
+    color: transparent;
+    font-weight: 600;
+    font-family: "IBM Plex Sans", sans-serif;
+    opacity: 0.3;
+  }
+  
+  @media screen and (max-width: 512px) {
+    .swiper-slide .number {
+      display: none;
+    }
+  
+    .swiper-item {
+      width: 90%;
+    }
+  }
+  .swiper-item:after {
+    content: "";
+    background-color: black;
+    position: absolute;
+    width: 100%;
+    height: inherit;
+    bottom: 0;
+    z-index: 1;
+    opacity: 0.1;
+  }
+  
+  .swiper-item:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    top: 0;
+    z-index: 1;
+    opacity: 0.2;
+  }
+  
+  /* swiper arrows */
+  .swiper-arrows {
+    width: 400px;
+    height: 80px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0px;
+    right: 20%;
+  }
+  
+  @media screen and (max-width: 512px) {
+    .swiper-arrows {
+      right: 10%;
+    }
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 80px !important;
+    height: 80px !important;
+    background-image: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    bottom: 0;
+    margin: 0;
+    transition: all 0.3s ease;
+  }
+  
+  .swiper-button-prev {
+    right: 90px !important;
+    left: auto !important;
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .swiper-button-next {
+    right: 0px;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  
+  .swiper-button-prev span,
+  .swiper-button-next span {
+    width: 10px;
+    height: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    position: absolute;
+    border: solid 2px #666666;
+    border-left: 0;
+    border-bottom: 0;
+    transition: all 0.1s ease;
+  }
+  
+  .swiper-button-prev span {
+    transform: rotate(-135deg);
+    left: 49%;
+  }
+  
+  .swiper-button-next span {
+    transform: rotate(45deg);
+    right: 49%;
+  }
+  
+  .swiper-button-prev:hover span,
+  .swiper-button-next:hover span {
+    width: 5px;
+    height: 5px;
+  }
+  
+  .swiper-button-prev:after,
+  .swiper-button-next:after {
+    width: 0px;
+    height: inherit;
+    content: "";
+    position: absolute;
+    background-color: white;
+    transition: all 0.4s ease-in-out;
+    z-index: -1;
+    opacity: 0.8;
+  }
+  
+  .swiper-button-prev:after {
+    right: 0;
+  }
+  
+  .swiper-button-next:after {
+    left: 0;
+  }
+  
+  .swiper-button-prev:hover:after,
+  .swiper-button-next:hover:after {
+    width: inherit;
+  }
+  
+  .swiper-button-disabled {
+    opacity: 1 !important;
+  }
+  
+  .swiper-button-disabled.swiper-button-prev span,
+  .swiper-button-disabled.swiper-button-next span {
+    opacity: 0.2;
+  }
+  
+  /* swiper arrows mobile */
+  @media screen and (max-width: 512px) {
+    .swiper-button-prev,
+  .swiper-button-next {
+      width: 60px;
+      height: 60px;
+      bottom: 0;
+    }
+  
+    .swiper-arrows {
+      height: 60px;
+    }
+  
+    .swiper-button-prev {
+      right: 60px;
+    }
+  
+    .swiper-button-prev span {
+      left: 45%;
+    }
+  
+    .swiper-button-next span {
+      right: 45%;
+    }
+  }
+  /* swiper pagination */
+  
+
+  .swiper-button-prev, .swiper-container-rtl .swiper-button-next {
+    background-image: none !important;
+    left: 10px;
+    right: auto;
+}
+.swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+    background-image: none !important;
+    right: 10px;
+    left: auto;
+}
+.swiper-button-prev:hover span, .swiper-button-next:hover span {
+    width: 10px !important;
+    height: 10px !important;
+}
+
+.swiper-button-next, .swiper-button-prev {
+    margin-top: -39px !important;
+}
+
+
+.loader {
+    border: 8px solid #f3f3f3; 
+    border-top: 8px solid #3498db; 
+    border-radius: 50%;
+    width: 60px;
+    margin: 0 auto;
+    height: 60px;
+    margin-top: 20%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+.swiper-pagination {
+    height: 3px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 60px !important;
+    right: calc(20% - 60px);
+    top: 20px;
+    float: right;
+    position: absolute;
+    left: auto !important;
+  }
+  
+  .banner_mainslider .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 10px 0px;
+  }
+  
+  .banner_mainslider .swiper-pagination-bullet {
+    background-color: white;
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+    width: 30px;
+    height: 3px;
+    border-radius: 0px;
+    opacity: 0.5;
+  }
+  
+  .banner_mainslider .swiper-pagination-bullet:hover {
+    width: 50px;
+  }
+  
+  .banner_mainslider .swiper-pagination-bullet-active,
+  .banner_mainslider .swiper-pagination-bullet-active:hover {
+    width: 60px;
+    transition: all 0.3s ease-in-out;
+    left: 0;
+    background-color: white;
+    opacity: 1;
+  }
+  
+  /* text content */
+  .banner_mainslider .slide-text {
+    text-align: left;
+    color: white;
+    opacity: 1;
+    z-index: 2;
+    font-family: "IBM Plex Sans", sans-serif;
+    width: 40%;
+    max-width: 250px;
+    padding: 30px;
+    position: absolute;
+    right: 5%;
+  }
+  
+  .banner_mainslider .slide-text.playText {
+    animation: transitionText 2s ease;
+  }
+  
+  @keyframes transitionText {
+    0% {
+      right: -100%;
+    }
+    100% {
+      right: 5%;
+    }
+  }
