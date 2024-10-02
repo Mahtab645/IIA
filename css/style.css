@@ -216,3 +216,22 @@ footer.footer a, footer.footer p {
     display: flex;
     gap: 19px;
 }
+.fs-18
+{
+    font-size: 20px;
+}
+
+.zoom-hover img:hover {
+    transform: scale(1.1);
+    transition: 0.5s all;
+}
+
+.zoom-hover {
+    overflow: hidden;
+    transition: 0.5s all;
+}
+
+.zoom-hover img {
+    transition: 0.5s all;
+}
+
